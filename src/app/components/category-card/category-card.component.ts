@@ -4,10 +4,10 @@ import { ComponentRendering } from '@sitecore-jss/sitecore-jss-angular';
 
 @Component({
   selector: 'app-content-block',
-  templateUrl: './content-block.component.html',
-  styleUrls: ['./content-block.component.scss']
+  templateUrl: './category-card.component.html',
+  styleUrls: ['./category-card.component.scss']
 })
-export class ContentBlockComponent {
+export class CategoryCard {
   console=console;
   @Input() rendering: ComponentRendering;
 }

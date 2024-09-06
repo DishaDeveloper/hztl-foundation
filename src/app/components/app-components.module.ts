@@ -11,6 +11,9 @@ import { ContentBlockComponent } from './content-block/content-block.component';
 import { GraphQLConnectedDemoComponent } from './graph-ql-connected-demo/graph-ql-connected-demo.component';
 import { GraphQLIntegratedDemoComponent } from './graph-ql-integrated-demo/graph-ql-integrated-demo.component';
 import { GraphQLLayoutComponent } from './graph-ql-layout/graph-ql-layout.component';
+import { MainLayoutComponent } from './main-layout/main-layout.component';
+import { PartialDesignDynamicPlaceholderComponent } from './partial-design-dynamic-placeholder/partial-design-dynamic-placeholder.component';
+import { RichTextComponent } from './rich-text/rich-text.component';
 import { StyleguideComponentParamsComponent } from './styleguide-component-params/styleguide-component-params.component';
 import { StyleguideCustomRouteTypeComponent } from './styleguide-custom-route-type/styleguide-custom-route-type.component';
 import { StyleguideEditFrameComponent } from './styleguide-edit-frame/styleguide-edit-frame.component';
@@ -43,6 +46,9 @@ import { StyleguideTrackingComponent } from './styleguide-tracking/styleguide-tr
       { name: 'GraphQLConnectedDemo', type: GraphQLConnectedDemoComponent },
       { name: 'GraphQLIntegratedDemo', type: GraphQLIntegratedDemoComponent },
       { name: 'GraphQLLayout', type: GraphQLLayoutComponent },
+      { name: 'MainLayout', type: MainLayoutComponent },
+      { name: 'PartialDesignDynamicPlaceholder', type: PartialDesignDynamicPlaceholderComponent },
+      { name: 'RichText', type: RichTextComponent },
       { name: 'StyleguideComponentParams', type: StyleguideComponentParamsComponent },
       { name: 'StyleguideCustomRouteType', type: StyleguideCustomRouteTypeComponent },
       { name: 'StyleguideEditFrame', type: StyleguideEditFrameComponent },
@@ -79,6 +85,9 @@ import { StyleguideTrackingComponent } from './styleguide-tracking/styleguide-tr
     GraphQLConnectedDemoComponent,
     GraphQLIntegratedDemoComponent,
     GraphQLLayoutComponent,
+    MainLayoutComponent,
+    PartialDesignDynamicPlaceholderComponent,
+    RichTextComponent,
     StyleguideComponentParamsComponent,
     StyleguideCustomRouteTypeComponent,
     StyleguideEditFrameComponent,

@@ -4,10 +4,10 @@ import { ComponentRendering } from '@sitecore-jss/sitecore-jss-angular';
 
 @Component({
   selector: 'app-content-block',
-  templateUrl: './content-block.component.html',
-  styleUrls: ['./content-block.component.scss']
+  templateUrl: './rich-text.component.html',
+  styleUrls: ['./rich-text.component.scss']
 })
-export class ContentBlockComponent {
+export class RichTextComponent {
   console=console;
   @Input() rendering: ComponentRendering;
 }
