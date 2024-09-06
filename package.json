@@ -3,14 +3,14 @@
   "version": "22.1.1",
   "description": "Application utilizing Sitecore JavaScript Services and Angular (angular-cli).",
   "config": {
-    "appName": "hztl-foundation",
+    "appName": "SiteAlpha",
     "rootPlaceholders": [
       "jss-main"
     ],
     "sitecoreDistPath": "",
     "sitecoreConfigPath": "/App_Config/Include/zzz",
     "buildArtifactsPath": "./dist",
-    "graphQLEndpointPath": "/sitecore/api/graph/edge",
+    "graphQLEndpointPath": "/api/graphql/v1",
     "language": "en",
     "templates": [
       "angular"
@@ -19,7 +19,7 @@
   "scripts": {
     "ng": "ng",
     "lint:yml": "ts-node ./scripts/lint-yml.ts",
-    "lint": "ng lint hztl-foundation --fix && npm run lint:yml",
+    "lint": "ng lint SiteAlpha --fix && npm run lint:yml",
     "e2e": "ng e2e",
     "jss": "jss",
     "start": "cross-env-shell JSS_MODE=disconnected \"npm-run-all --serial bootstrap --parallel start:angular start:proxy start:watch-components\"",
