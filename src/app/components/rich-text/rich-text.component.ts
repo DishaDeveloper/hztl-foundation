@@ -8,6 +8,5 @@ import { ComponentRendering } from '@sitecore-jss/sitecore-jss-angular';
   styleUrls: ['./rich-text.component.scss']
 })
 export class RichTextComponent {
-  console=console;
   @Input() rendering: ComponentRendering;
 }

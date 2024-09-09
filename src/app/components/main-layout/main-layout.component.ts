@@ -7,7 +7,6 @@ import { ComponentRendering } from '@sitecore-jss/sitecore-jss-angular';
   
 })
 export class MainLayoutComponent {
-  console=console;
   @Input() rendering: ComponentRendering;
 }
 

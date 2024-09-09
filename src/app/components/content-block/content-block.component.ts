@@ -8,6 +8,5 @@ import { ComponentRendering } from '@sitecore-jss/sitecore-jss-angular';
   styleUrls: ['./content-block.component.scss']
 })
 export class ContentBlockComponent {
-  console=console;
   @Input() rendering: ComponentRendering;
 }

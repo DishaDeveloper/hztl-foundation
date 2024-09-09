@@ -1,0 +1,13 @@
+<div class="accordion-container">
+    <div class="accordion-item">
+        <!-- Button to toggle the accordion section -->
+        <button class="accordion-button" (click)="toggleAccordion(rendering?.params.DynamicPlaceholderId)">
+            <h4 *scText="rendering.fields.heading"></h4>
+        </button>
+        <!-- Panel that shows or hides based on isActive state -->
+        <div class="accordion-panel" [ngClass]="visible ? 'open': ''" *ngIf="visible">
+          <p *scRichText="rendering.fields.content"></p>
+        </div>
+      </div>
+  </div>
+  
