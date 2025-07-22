@@ -1,14 +1,22 @@
-<app-navigation></app-navigation>
+<sc-placeholder
+  name="factory-header"
+  [rendering]="route"
+  (loaded)="onPlaceholderLoaded($event)"
+></sc-placeholder>
+<sc-placeholder
+  name="factory-hero"
+  [rendering]="route"
+  (loaded)="onPlaceholderLoaded($event)"
+></sc-placeholder>
 <div class="container">
   <ng-container *ngIf="state === LayoutState.Layout">
     <app-visitor-identification></app-visitor-identification>
     <sc-placeholder
-      name="headless-main"
+      name="factory-main"
       [rendering]="route"
       (loaded)="onPlaceholderLoaded($event)"
     ></sc-placeholder>
   </ng-container>
-
   <app-not-found
     *ngIf="state === LayoutState.NotFound"
     [errorContextData]="errorContextData"

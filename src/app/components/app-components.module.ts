@@ -13,6 +13,8 @@ import { ContentBlockComponent } from './content-block/content-block.component';
 import { GraphQLConnectedDemoComponent } from './graph-ql-connected-demo/graph-ql-connected-demo.component';
 import { GraphQLIntegratedDemoComponent } from './graph-ql-integrated-demo/graph-ql-integrated-demo.component';
 import { GraphQLLayoutComponent } from './graph-ql-layout/graph-ql-layout.component';
+import { HeaderComponent } from './header/header.component';
+import { HomepageHeroComponent } from './homepage-hero/homepage-hero.component';
 import { MainLayoutComponent } from './main-layout/main-layout.component';
 import { PartialDesignDynamicPlaceholderComponent } from './partial-design-dynamic-placeholder/partial-design-dynamic-placeholder.component';
 import { RichTextComponent } from './rich-text/rich-text.component';
@@ -50,6 +52,8 @@ import { StyleguideTrackingComponent } from './styleguide-tracking/styleguide-tr
       { name: 'GraphQLConnectedDemo', type: GraphQLConnectedDemoComponent },
       { name: 'GraphQLIntegratedDemo', type: GraphQLIntegratedDemoComponent },
       { name: 'GraphQLLayout', type: GraphQLLayoutComponent },
+      { name: 'Header', type: HeaderComponent },
+      { name: 'HomepageHero', type: HomepageHeroComponent },
       { name: 'MainLayout', type: MainLayoutComponent },
       { name: 'PartialDesignDynamicPlaceholder', type: PartialDesignDynamicPlaceholderComponent },
       { name: 'RichText', type: RichTextComponent },
@@ -91,6 +95,8 @@ import { StyleguideTrackingComponent } from './styleguide-tracking/styleguide-tr
     GraphQLConnectedDemoComponent,
     GraphQLIntegratedDemoComponent,
     GraphQLLayoutComponent,
+    HeaderComponent,
+    HomepageHeroComponent,
     MainLayoutComponent,
     PartialDesignDynamicPlaceholderComponent,
     RichTextComponent,

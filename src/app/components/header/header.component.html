@@ -1,0 +1,59 @@
+<header
+  class="w-full flex items-center justify-between px-6 py-4 border-b border-gray-200 bg-[#fbe74d]"
+>
+  <!-- Logo -->
+  <a [href]="logoUrl" class="flex items-center">
+    <img [src]="logoImage?.src" [alt]="logoImage?.alt" class="h-8 w-auto" />
+  </a>
+
+  <!-- Navigation -->
+  <nav class="flex-1 ml-10">
+    <ul class="flex gap-6">
+      <li *ngFor="let item of mainNavigations" class="relative group">
+        <a
+          [href]="item.fields?.navigationLink?.value?.href"
+          class="text-gray-800 hover:text-blue-600 font-medium"
+        >
+          {{ item.displayName }}
+        </a>
+
+        <!-- Dropdown -->
+        <ul
+          *ngIf="
+            item.fields?.isDropdown?.value &&
+            item.fields?.secondaryNavigations?.length
+          "
+          class="absolute hidden group-hover:block bg-white border mt-2 rounded shadow-md z-10 min-w-[200px]"
+        >
+          <li
+            *ngFor="let sub of item.fields?.secondaryNavigations"
+            class="px-4 py-2 hover:bg-gray-100"
+          >
+            <a
+              [href]="sub.fields?.navigationLink?.value?.href"
+              class="block text-gray-700"
+            >
+              {{ sub.displayName }}
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Region Info -->
+  <div
+    class="flex items-center gap-2 text-sm text-gray-600"
+    *ngIf="regions.length && regions[0]?.fields?.countries?.length"
+  >
+    <span>
+      {{ regions[0]?.displayName }}
+      ({{ regions[0]?.fields?.countries[0]?.fields?.languageName?.value }})
+    </span>
+    <img
+      [src]="regions[0]?.fields?.countries[0]?.fields?.flagIcon?.value?.src"
+      [alt]="regions[0]?.fields?.countries[0]?.fields?.flagIcon?.value?.alt"
+      class="h-4 w-5"
+    />
+  </div>
+</header>
