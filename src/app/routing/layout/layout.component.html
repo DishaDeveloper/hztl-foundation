@@ -8,18 +8,17 @@
   [rendering]="route"
   (loaded)="onPlaceholderLoaded($event)"
 ></sc-placeholder>
-<div class="container">
-  <ng-container *ngIf="state === LayoutState.Layout">
-    <app-visitor-identification></app-visitor-identification>
-    <sc-placeholder
-      name="factory-main"
-      [rendering]="route"
-      (loaded)="onPlaceholderLoaded($event)"
-    ></sc-placeholder>
-  </ng-container>
-  <app-not-found
-    *ngIf="state === LayoutState.NotFound"
-    [errorContextData]="errorContextData"
-  ></app-not-found>
-  <app-server-error *ngIf="state === LayoutState.Error"></app-server-error>
-</div>
+
+<ng-container *ngIf="state === LayoutState.Layout">
+  <app-visitor-identification></app-visitor-identification>
+  <sc-placeholder
+    name="factory-main"
+    [rendering]="route"
+    (loaded)="onPlaceholderLoaded($event)"
+  ></sc-placeholder>
+</ng-container>
+<app-not-found
+  *ngIf="state === LayoutState.NotFound"
+  [errorContextData]="errorContextData"
+></app-not-found>
+<app-server-error *ngIf="state === LayoutState.Error"></app-server-error>

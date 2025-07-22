@@ -9,6 +9,7 @@ import { JssModule } from '@sitecore-jss/sitecore-jss-angular';
 import { AppComponentsSharedModule } from './app-components.shared.module';
 import { AccordionComponent } from './accordion/accordion.component';
 import { AccordionItemComponent } from './accordion-item/accordion-item.component';
+import { CategoryCardComponent } from './category-card/category-card.component';
 import { ContentBlockComponent } from './content-block/content-block.component';
 import { GraphQLConnectedDemoComponent } from './graph-ql-connected-demo/graph-ql-connected-demo.component';
 import { GraphQLIntegratedDemoComponent } from './graph-ql-integrated-demo/graph-ql-integrated-demo.component';
@@ -48,6 +49,7 @@ import { StyleguideTrackingComponent } from './styleguide-tracking/styleguide-tr
     JssModule.withComponents([
       { name: 'Accordion', type: AccordionComponent },
       { name: 'AccordionItem', type: AccordionItemComponent },
+      { name: 'CategoryCard', type: CategoryCardComponent },
       { name: 'ContentBlock', type: ContentBlockComponent },
       { name: 'GraphQLConnectedDemo', type: GraphQLConnectedDemoComponent },
       { name: 'GraphQLIntegratedDemo', type: GraphQLIntegratedDemoComponent },
@@ -91,6 +93,7 @@ import { StyleguideTrackingComponent } from './styleguide-tracking/styleguide-tr
   declarations: [
     AccordionComponent,
     AccordionItemComponent,
+    CategoryCardComponent,
     ContentBlockComponent,
     GraphQLConnectedDemoComponent,
     GraphQLIntegratedDemoComponent,
