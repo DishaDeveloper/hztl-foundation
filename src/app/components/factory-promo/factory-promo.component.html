@@ -1,0 +1,117 @@
+<section 
+  class="w-full py-12 lg:py-20"
+  [style.background-color]="getBackgroundColor()"
+>
+  <div class="container mx-auto px-4 lg:px-8">
+   
+    <div 
+      class="flex flex-col items-center gap-8 lg:gap-12"
+      [ngClass]="{
+        'lg:flex-row': isLeftAligned,
+        'lg:flex-row-reverse': isRightAligned,
+        'lg:flex-col': isCenterAligned
+      }"
+    >
+      <!-- Image Section -->
+      <div class="w-full" [ngClass]="{'lg:w-1/2': !isCenterAligned}">
+        <div class="relative">
+          <!-- Video placeholder (if video is provided) -->
+          <div 
+            *ngIf="video && !image?.value?.src" 
+            class="w-full h-64 lg:h-96 bg-gray-200 rounded-lg flex items-center justify-center"
+          >
+            <p class="text-gray-500">Video content would be displayed here</p>
+          </div>
+          
+          <!-- Image -->
+          <img 
+            *ngIf="image?.value?.src"
+            [src]="image.value.src"
+            [alt]="image.value.alt || ''"
+            [width]="image.value.width"
+            [height]="image.value.height"
+            class="w-full h-auto object-cover rounded-lg"
+          />
+          
+          <!-- Placeholder if no image or video -->
+          <div 
+            *ngIf="!image?.value?.src && !video"
+            class="w-full h-64 lg:h-96 bg-gray-200 rounded-lg flex items-center justify-center"
+          >
+            <p class="text-gray-500">No image available</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Content Section -->
+      <div class="w-full" [ngClass]="{'lg:w-1/2': !isCenterAligned}">
+        <div class="max-w-lg" [ngClass]="{'mx-auto text-center': isCenterAligned}">
+          <!-- Label (if provided) -->
+          <p 
+            *ngIf="label" 
+            class="text-sm font-medium text-gray-600 mb-2 uppercase tracking-wide"
+          >
+            {{ label }}
+          </p>
+
+          <!-- Headline -->
+          <h2 
+            *ngIf="headline"
+            class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4"
+          >
+            {{ headline }}
+          </h2>
+
+          <!-- Description -->
+          <div 
+            *ngIf="description"
+            class="text-gray-700 text-lg mb-6 prose prose-lg max-w-none"
+            [innerHTML]="description"
+          >
+          </div>
+
+          <!-- Disclaimer Text -->
+          <p 
+            *ngIf="disclaimerText"
+            class="text-sm text-gray-600 mb-6"
+          >
+            {{ disclaimerText }}
+          </p>
+
+          <!-- CTA Buttons -->
+          <div class="flex flex-col sm:flex-row gap-4" [ngClass]="{'justify-center': isCenterAligned}">
+            <!-- Primary CTA -->
+            <a
+              *ngIf="primaryCTA?.value?.href"
+              [href]="primaryCTA.value.href"
+              [attr.target]="primaryCTA.value.target"
+              [attr.title]="primaryCTA.value.title"
+              class="inline-flex items-center justify-center px-6 py-3 text-base font-medium rounded-md transition-colors duration-200"
+              [ngClass]="{
+                'bg-black text-white hover:bg-gray-800': backgroundColor.toLowerCase() !== 'yellow',
+                'bg-white text-black border border-black hover:bg-gray-100': backgroundColor.toLowerCase() === 'yellow'
+              }"
+            >
+              {{ primaryCTA.value.text || "Learn More" }}
+            </a>
+
+            <!-- Secondary CTA -->
+            <a
+              *ngIf="secondaryCTA?.value?.href"
+              [href]="secondaryCTA.value.href"
+              [attr.target]="secondaryCTA.value.target"
+              [attr.title]="secondaryCTA.value.title"
+              class="inline-flex items-center justify-center px-6 py-3 text-base font-medium rounded-md border transition-colors duration-200"
+              [ngClass]="{
+                'border-black text-black hover:bg-black hover:text-white': backgroundColor.toLowerCase() !== 'yellow',
+                'border-gray-600 text-gray-700 hover:bg-gray-100': backgroundColor.toLowerCase() === 'yellow'
+              }"
+            >
+              {{ secondaryCTA.value.text || "Learn More" }}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

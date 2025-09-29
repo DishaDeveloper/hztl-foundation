@@ -1,0 +1,103 @@
+// Contact Us Promo Component Styles - Minimalist Design
+
+.contact-us-promo {
+  background-color: #ffffff;
+  
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+
+    @media (min-width: 1024px) {
+      flex-direction: row;
+      gap: 4rem;
+    }
+  }
+
+  &__text-section {
+    flex: 1;
+  }
+
+  &__headline {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+    font-family: serif;
+
+    @media (min-width: 1024px) {
+      font-size: 3rem;
+    }
+  }
+
+  &__description {
+    color: #111827;
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+    font-family: serif;
+
+    @media (min-width: 1024px) {
+      font-size: 1.25rem;
+    }
+
+    // Rich text content styling
+    :global {
+      p {
+        margin-bottom: 0.5rem;
+        
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &__cta-section {
+    flex-shrink: 0;
+  }
+
+  &__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    background-color: #000000;
+    color: #ffffff;
+
+    &:hover {
+      background-color: #374151;
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 1023px) {
+  .contact-us-promo {
+    &__content {
+      text-align: center;
+    }
+
+    &__headline {
+      font-size: 2rem;
+    }
+
+    &__description {
+      font-size: 1rem;
+    }
+  }
+}

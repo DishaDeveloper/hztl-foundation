@@ -10,7 +10,9 @@ import { AppComponentsSharedModule } from './app-components.shared.module';
 import { AccordionComponent } from './accordion/accordion.component';
 import { AccordionItemComponent } from './accordion-item/accordion-item.component';
 import { CategoryCardComponent } from './category-card/category-card.component';
+import { ContactUsPromoComponent } from './contact-us-promo/contact-us-promo.component';
 import { ContentBlockComponent } from './content-block/content-block.component';
+import { FactoryPromoComponent } from './factory-promo/factory-promo.component';
 import { GraphQLConnectedDemoComponent } from './graph-ql-connected-demo/graph-ql-connected-demo.component';
 import { GraphQLIntegratedDemoComponent } from './graph-ql-integrated-demo/graph-ql-integrated-demo.component';
 import { GraphQLLayoutComponent } from './graph-ql-layout/graph-ql-layout.component';
@@ -18,6 +20,7 @@ import { HeaderComponent } from './header/header.component';
 import { HomepageHeroComponent } from './homepage-hero/homepage-hero.component';
 import { MainLayoutComponent } from './main-layout/main-layout.component';
 import { PartialDesignDynamicPlaceholderComponent } from './partial-design-dynamic-placeholder/partial-design-dynamic-placeholder.component';
+import { ProductCardComponent } from './product-card/product-card.component';
 import { RichTextComponent } from './rich-text/rich-text.component';
 import { StyleguideComponentParamsComponent } from './styleguide-component-params/styleguide-component-params.component';
 import { StyleguideCustomRouteTypeComponent } from './styleguide-custom-route-type/styleguide-custom-route-type.component';
@@ -50,7 +53,9 @@ import { StyleguideTrackingComponent } from './styleguide-tracking/styleguide-tr
       { name: 'Accordion', type: AccordionComponent },
       { name: 'AccordionItem', type: AccordionItemComponent },
       { name: 'CategoryCard', type: CategoryCardComponent },
+      { name: 'ContactUsPromo', type: ContactUsPromoComponent },
       { name: 'ContentBlock', type: ContentBlockComponent },
+      { name: 'FactoryPromo', type: FactoryPromoComponent },
       { name: 'GraphQLConnectedDemo', type: GraphQLConnectedDemoComponent },
       { name: 'GraphQLIntegratedDemo', type: GraphQLIntegratedDemoComponent },
       { name: 'GraphQLLayout', type: GraphQLLayoutComponent },
@@ -58,6 +63,7 @@ import { StyleguideTrackingComponent } from './styleguide-tracking/styleguide-tr
       { name: 'HomepageHero', type: HomepageHeroComponent },
       { name: 'MainLayout', type: MainLayoutComponent },
       { name: 'PartialDesignDynamicPlaceholder', type: PartialDesignDynamicPlaceholderComponent },
+      { name: 'ProductCard', type: ProductCardComponent },
       { name: 'RichText', type: RichTextComponent },
       { name: 'StyleguideComponentParams', type: StyleguideComponentParamsComponent },
       { name: 'StyleguideCustomRouteType', type: StyleguideCustomRouteTypeComponent },
@@ -94,7 +100,9 @@ import { StyleguideTrackingComponent } from './styleguide-tracking/styleguide-tr
     AccordionComponent,
     AccordionItemComponent,
     CategoryCardComponent,
+    ContactUsPromoComponent,
     ContentBlockComponent,
+    FactoryPromoComponent,
     GraphQLConnectedDemoComponent,
     GraphQLIntegratedDemoComponent,
     GraphQLLayoutComponent,
@@ -102,6 +110,7 @@ import { StyleguideTrackingComponent } from './styleguide-tracking/styleguide-tr
     HomepageHeroComponent,
     MainLayoutComponent,
     PartialDesignDynamicPlaceholderComponent,
+    ProductCardComponent,
     RichTextComponent,
     StyleguideComponentParamsComponent,
     StyleguideCustomRouteTypeComponent,

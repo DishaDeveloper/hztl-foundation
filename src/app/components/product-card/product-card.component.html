@@ -1,0 +1,101 @@
+<section 
+  class="w-full py-12 lg:py-20"
+  [style.background]="getBackgroundColor()"
+>
+  <div class="container mx-auto px-4 lg:px-8">
+    <!-- Header Section -->
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8 lg:mb-12">
+      <!-- Title -->
+      <h2 
+        *ngIf="title"
+        class="text-3xl lg:text-4xl font-bold text-white mb-4 sm:mb-0"
+      >
+        {{ title }}
+      </h2>
+
+      <!-- Primary CTA Button -->
+      <a
+        *ngIf="primaryCTA?.value?.href"
+        [href]="primaryCTA.value.href"
+        [attr.target]="primaryCTA.value.target"
+        [attr.title]="primaryCTA.value.title"
+        class="inline-flex items-center justify-center px-6 py-3 text-base font-medium rounded-lg transition-colors duration-200 bg-orange-600 hover:bg-orange-700 text-white"
+      >
+        {{ primaryCTA.value.text || "View All Products" }}
+      </a>
+    </div>
+
+    <!-- Description -->
+    <div 
+      *ngIf="description"
+      class="text-white text-lg mb-8 lg:mb-12 max-w-4xl"
+      [innerHTML]="description"
+    >
+    </div>
+
+    <!-- Products Grid -->
+    <div class="grid gap-6" [ngClass]="getGridClass()">
+      <div 
+        *ngFor="let product of productCards; trackBy: trackByProductId"
+        class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+      >
+        <!-- Product Image -->
+        <div class="relative aspect-square bg-gray-100">
+          <img 
+            *ngIf="product.fields.productInformation.fields.primaryImage?.value?.src"
+            [src]="product.fields.productInformation.fields.primaryImage.value.src"
+            [alt]="product.fields.productInformation.fields.primaryImage.value.alt || product.fields.productInformation.fields.headline.value"
+            class="w-full h-full object-contain p-4"
+          />
+          
+          <!-- Badge (if available) -->
+          <div 
+            *ngIf="product.fields.badge?.value"
+            class="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded"
+            [ngClass]="{'w-full top-0 left-0 rounded-t-lg text-center': isBadgeFullWidth}"
+          >
+            {{ product.fields.badge.value }}
+          </div>
+        </div>
+
+        <!-- Product Information -->
+        <div class="p-4">
+          <!-- Product Name -->
+          <h3 class="text-lg font-semibold text-gray-900 mb-2 line-clamp-2">
+            {{ product.fields.productInformation.fields.headline.value || product.displayName }}
+          </h3>
+
+          <!-- Product Description (truncated) -->
+          <p 
+            *ngIf="product.fields.productInformation.fields.description?.value"
+            class="text-gray-600 text-sm mb-4 line-clamp-3"
+            [innerHTML]="product.fields.productInformation.fields.description.value"
+          >
+          </p>
+
+          <!-- CTA Link -->
+          <a
+            *ngIf="product.fields.ctaLink?.value?.href"
+            [href]="product.fields.ctaLink.value.href"
+            [attr.target]="product.fields.ctaLink.value.target"
+            [attr.title]="product.fields.ctaLink.value.title"
+            class="inline-flex items-center text-orange-600 hover:text-orange-700 font-medium text-sm transition-colors duration-200"
+          >
+            Learn More
+            <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Disclaimer Text -->
+    <p 
+      *ngIf="disclaimerText"
+      class="text-white text-sm mt-8 text-center opacity-90"
+    >
+      {{ disclaimerText }}
+    </p>
+  </div>
+</section>
