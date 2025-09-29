@@ -8,8 +8,7 @@ import {
 
 @Component({
   selector: 'app-factory-promo',
-  templateUrl: './factory-promo.component.html',
-  styleUrls: ['./factory-promo.component.scss']
+  templateUrl: './factory-promo.component.html'
 })
 export class FactoryPromoComponent implements OnInit {
   @Input() rendering!: ComponentRendering;
