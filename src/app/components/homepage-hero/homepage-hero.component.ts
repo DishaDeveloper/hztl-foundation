@@ -34,7 +34,6 @@ export class HomepageHeroComponent implements OnInit {
       this.secondaryCTA = fields.secondaryCTA as LinkField;
       this.desktopImage = fields.desktopImage as ImageField;
 
-      console.log('Fields:', fields);
     } else {
       console.warn('No slide data found');
     }

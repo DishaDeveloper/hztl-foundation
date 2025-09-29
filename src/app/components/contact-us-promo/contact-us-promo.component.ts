@@ -41,9 +41,6 @@ export class ContactUsPromoComponent implements OnInit {
       this.alignContent = params.alignContent || 'Left';
       this.backgroundColor = params.backgroundColor || 'Light';
     }
-
-    console.log('ContactUsPromo Fields:', fields);
-    console.log('ContactUsPromo Params:', params);
   }
 
   get backgroundClass(): string {

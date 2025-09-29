@@ -35,9 +35,6 @@ export class ProductCardComponent implements OnInit {
       this.gridParameters = params.GridParameters || 'col-12';
       this.isBadgeFullWidth = params.isBadgeFullWidth === '1';
     }
-
-    console.log('ProductCard Fields:', fields);
-    console.log('ProductCard Params:', params);
   }
 
   getBackgroundColor(): string {

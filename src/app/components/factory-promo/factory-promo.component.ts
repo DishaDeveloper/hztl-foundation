@@ -44,9 +44,6 @@ export class FactoryPromoComponent implements OnInit {
       this.alignContent = params.alignContent || 'Left';
       this.backgroundColor = params.backgroundColor || 'Light';
     }
-
-    console.log('FactoryPromo Fields:', fields);
-    console.log('FactoryPromo Params:', params);
   }
 
   get backgroundClass(): string {
